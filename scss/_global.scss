@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+$softBlue: hsl(231, 69%, 60%);
+$softRed: hsl(0, 94%, 66%);
+
+$grayishBlue: hsl(229, 8%, 60%);
+$veryDarkBlue: hsl(229, 31%, 21%);
+$lightGrey: lighten($grayishBlue, 30%);
+$boxShadow: 0 4px 4px 0px $lightGrey;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    // width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    padding: 12px 1.5rem;
+    // font-weight: 400;
+    box-shadow: 0 4px 4px 0px lighten($grayishBlue, 30%);
+    font-size: 14px;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.deco-right {
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 58%;
+        transform: translateY(-50%);
+        background-color: $softBlue;
+        width: 45%;
+        max-width: 700px;
+        // height: 300px;
+        height: 35%;
+        max-height: 250px;
+        border-radius: 200px 0 0 200px;
+        z-index: -1;
+    }
+}
+
+
+.deco-left {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 75%;
+        transform: translateY(-50%);
+        background-color: $softBlue;
+        width: 45%;
+        max-width: 700px;
+        height: 70%;
+        max-height: 300px;
+        border-radius: 0px 200px 200px 0px;
+        z-index: -1;
+    }
+}
+
+.heading {
+    text-align: center;
+
+    p {
+        margin: auto;
+        color: $grayishBlue;
+        max-width: 550px;
+        line-height: 1.4;
+    }
+}
